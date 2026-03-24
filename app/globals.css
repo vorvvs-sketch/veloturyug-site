@@ -112,7 +112,9 @@ img {
 .stack-card,
 .trust-panel,
 .trust-item,
-.mini-card {
+.mini-card,
+.community-card,
+.mood-card {
   background: var(--surface);
   backdrop-filter: blur(10px);
   border: 1px solid var(--line);
@@ -134,7 +136,9 @@ img {
 .checklist-card,
 .stack-card,
 .trust-panel,
-.mini-card {
+.mini-card,
+.community-card,
+.mood-card {
   padding: 28px;
 }
 
@@ -293,6 +297,26 @@ h3 {
 .section__heading {
   max-width: 780px;
   margin-bottom: 24px;
+}
+
+.tour-groups {
+  display: grid;
+  gap: 28px;
+}
+
+.tour-group {
+  display: grid;
+  gap: 18px;
+}
+
+.tour-group__intro {
+  max-width: 760px;
+}
+
+.tour-group__description {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .tour-grid,
@@ -457,6 +481,74 @@ h3 {
   line-height: 1.6;
 }
 
+.community-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  background:
+    linear-gradient(130deg, rgba(236, 247, 255, 0.88), rgba(247, 248, 238, 0.8)),
+    radial-gradient(circle at top left, rgba(71, 152, 255, 0.12), transparent 30%);
+}
+
+.community-card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #2aabee;
+  color: white;
+  font-weight: 700;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mood-card {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mood-card p {
+  color: rgba(255, 250, 244, 0.88);
+}
+
+.mood-card h3 {
+  color: #fff9f1;
+}
+
+.mood-card .eyebrow {
+  color: rgba(255, 249, 241, 0.72);
+}
+
+.mood-card--sea {
+  background:
+    linear-gradient(180deg, rgba(16, 73, 112, 0.2), rgba(11, 55, 88, 0.92)),
+    radial-gradient(circle at top, rgba(98, 197, 255, 0.3), transparent 30%),
+    linear-gradient(135deg, #2f87b8, #0f4f7a);
+}
+
+.mood-card--forest {
+  background:
+    linear-gradient(180deg, rgba(54, 92, 66, 0.18), rgba(39, 66, 45, 0.95)),
+    radial-gradient(circle at top, rgba(157, 212, 136, 0.2), transparent 30%),
+    linear-gradient(135deg, #6c8a4a, #335338);
+}
+
+.mood-card--city {
+  background:
+    linear-gradient(180deg, rgba(143, 84, 25, 0.16), rgba(104, 53, 18, 0.94)),
+    radial-gradient(circle at top, rgba(255, 208, 120, 0.22), transparent 32%),
+    linear-gradient(135deg, #d18c34, #8d4a1c);
+}
+
 .steps {
   display: grid;
   gap: 16px;
@@ -611,7 +703,9 @@ h3 {
   .tour-grid,
   .faq-list,
   .pricing-grid,
-  .promo-banner {
+  .promo-banner,
+  .mood-grid,
+  .community-card {
     grid-template-columns: 1fr;
   }
 
