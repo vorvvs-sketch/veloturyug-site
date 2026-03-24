@@ -324,6 +324,57 @@ const contacts = [
   }
 ];
 
+const upcomingRides = [
+  {
+    title: "Парк Краснодар утром",
+    note: "Ранний формат 5:00-9:00",
+    status: "Открываем запись"
+  },
+  {
+    title: "ВелоSea: Геленджик - Кабардинка",
+    note: "Выезд в хороший погодный день",
+    status: "Ближайший анонс"
+  },
+  {
+    title: "Абрау-Дюрсо classic",
+    note: "Маршрут выходного дня",
+    status: "Скоро в расписании"
+  }
+];
+
+const routeLevels = [
+  {
+    title: "Легкий",
+    text:
+      "Для новичков, пар, семей и тех, кто давно не катался. Спокойный темп, короткая дистанция и акцент на комфорт."
+  },
+  {
+    title: "Средний",
+    text:
+      "Для тех, кто хочет насыщенный день на природе и готов к более длинному маршруту, но без экстремальной нагрузки."
+  },
+  {
+    title: "Сильный / premium",
+    text:
+      "Для уверенной аудитории, которая хочет яркий видовой маршрут, более серьезный рельеф и сильное впечатление от поездки."
+  }
+];
+
+const packingList = [
+  "Удобная одежда по погоде",
+  "Закрытая спортивная обувь",
+  "Вода и легкий перекус",
+  "Очки, крем от солнца, головной убор",
+  "Небольшой рюкзак или поясная сумка"
+];
+
+const bookingSteps = [
+  "Вы пишете нам в Telegram, WhatsApp или звоните.",
+  "Мы помогаем выбрать маршрут под ваш уровень и формат поездки.",
+  "Подтверждаем дату, место старта и детали участия.",
+  "В день выезда встречаемся, проводим инструктаж и едем маршрут."
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -557,6 +608,34 @@ export default function HomePage() {
       </section>
 
       <section className="section section--split">
+        <div className="schedule-card">
+          <p className="eyebrow">Ближайшие выезды</p>
+          <h2>Даже без полного расписания можно показать, что проект уже живой</h2>
+          <div className="schedule-list">
+            {upcomingRides.map((ride) => (
+              <article className="schedule-item" key={ride.title}>
+                <div>
+                  <h3>{ride.title}</h3>
+                  <p>{ride.note}</p>
+                </div>
+                <span>{ride.status}</span>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="stack-card">
+          <article className="mini-card">
+            <p className="mini-card__label">Как записаться</p>
+            <ul className="plain-list">
+              {bookingSteps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="section section--split">
         <div>
           <p className="eyebrow">Как проходит тур</p>
           <h2>Понятный путь от заявки до финиша</h2>
@@ -575,6 +654,30 @@ export default function HomePage() {
             <li>Людям, которым интересны новые знакомства и живое общение</li>
           </ul>
         </aside>
+      </section>
+
+      <section className="section section--split">
+        <div className="checklist-card">
+          <p className="eyebrow">Уровни маршрутов</p>
+          <h2>Понятная разбивка, чтобы человеку было не страшно записаться</h2>
+          <div className="level-list">
+            {routeLevels.map((level) => (
+              <article className="level-item" key={level.title}>
+                <h3>{level.title}</h3>
+                <p>{level.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="checklist-card checklist-card--soft">
+          <p className="eyebrow">Что взять с собой</p>
+          <h2>Простой список, который делает сайт практичным</h2>
+          <ul className="checklist">
+            {packingList.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section className="section section--pricing" id="prices">
