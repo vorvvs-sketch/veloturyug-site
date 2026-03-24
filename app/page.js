@@ -117,9 +117,43 @@ const directions = [
   "Крым как следующее направление развития"
 ];
 
+const organizers = [
+  {
+    title: "Организатор маршрута",
+    text:
+      "Ты собираешь группу, отвечаешь за общую атмосферу поездки и развиваешь проект как понятный формат отдыха выходного дня."
+  },
+  {
+    title: "Напарник с опытом велопоходов",
+    text:
+      "Второй человек в команде помогает с маршрутом, темпом группы и практической частью выезда, чтобы участники чувствовали себя спокойнее."
+  }
+];
+
+const trustPoints = [
+  "Небольшая группа вместо толпы и суеты",
+  "Живые маршруты, а не абстрактные обещания",
+  "Электровелосипеды для комфортного старта даже новичкам",
+  "Сопровождение на всем маршруте",
+  "Формат знакомства, общения и красивого активного выходного"
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
+      <header className="topbar">
+        <a className="topbar__brand" href="#top">
+          <span className="topbar__dot" />
+          ВелоТур Юг
+        </a>
+        <nav className="topbar__nav" aria-label="Навигация по странице">
+          <a href="#tours">Маршруты</a>
+          <a href="#about">О проекте</a>
+          <a href="#prices">Цены</a>
+          <a href="#booking">Запись</a>
+        </nav>
+      </header>
+
       <section className="hero">
         <div className="hero__content">
           <p className="eyebrow">VeloturYug.ru</p>
@@ -170,6 +204,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section section--split" id="about">
+        <div>
+          <p className="eyebrow">О проекте</p>
+          <h2>Не просто покататься, а провести красивый день в хорошей компании</h2>
+          <p className="section__text">
+            В основе проекта простая идея: собрать небольшую группу, дать людям
+            удобные электровелосипеды, показать природу юга и сделать выезд
+            комфортным даже для тех, кто давно не катался или никогда не ездил в
+            подобном формате.
+          </p>
+          <p className="section__text">
+            Это не спорт ради результата и не сухой прокат техники. Это
+            организованный день на маршруте, где важны впечатления, красота,
+            безопасность, ритм группы и удовольствие от самой поездки.
+          </p>
+        </div>
+        <div className="stack-card">
+          {organizers.map((item) => (
+            <article className="mini-card" key={item.title}>
+              <p className="mini-card__label">{item.title}</p>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section" id="tours">
         <div className="section__heading">
           <p className="eyebrow">Маршруты</p>
@@ -214,6 +274,26 @@ export default function HomePage() {
       </section>
 
       <section className="section section--split">
+        <div className="trust-panel">
+          <p className="eyebrow">Почему вам могут доверять</p>
+          <h2>У проекта уже есть понятная логика, а не просто идея “когда-нибудь начать”</h2>
+          <p className="section__text">
+            Велосипеды планируются под реальные заявки, маршруты подбираются под
+            формат группы, а выезды проходят с сопровождением двух людей. Это
+            делает предложение более живым, понятным и внушающим доверие.
+          </p>
+        </div>
+        <div className="trust-list">
+          {trustPoints.map((point) => (
+            <article className="trust-item" key={point}>
+              <span className="trust-item__mark" />
+              <p>{point}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section--split">
         <div>
           <p className="eyebrow">Как проходит тур</p>
           <h2>Понятный путь от заявки до финиша</h2>
@@ -234,7 +314,7 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <section className="section section--pricing">
+      <section className="section section--pricing" id="prices">
         <div className="section__heading">
           <p className="eyebrow">Цены</p>
           <h2>Простая ценовая модель для первого запуска</h2>
@@ -289,23 +369,28 @@ export default function HomePage() {
       <section className="section booking" id="booking">
         <div>
           <p className="eyebrow">Запись</p>
-          <h2>Сайт уже можно использовать как рабочую точку сбора заявок</h2>
+          <h2>Сайт уже можно использовать как рабочую точку для первых заявок</h2>
           <p className="section__text">
             На этом этапе можно поставить реальные контакты, даты ближайших
             выездов, фото и перейти от идеи к первым бронированиям.
           </p>
         </div>
         <div className="booking-card">
-          <p className="booking-card__lead">Что добавить следующим шагом</p>
+          <p className="booking-card__lead">Минимум, чтобы сайт начал работать</p>
           <ul>
-            <li>Кнопки Telegram и WhatsApp</li>
-            <li>Календарь ближайших выездов</li>
-            <li>Фото с маршрутов и короткие видео</li>
-            <li>Имя организаторов и блок доверия</li>
+            <li>Телефон или WhatsApp для быстрой записи</li>
+            <li>2-3 ближайшие даты выездов</li>
+            <li>Несколько реальных фото с маршрутов</li>
+            <li>Короткий блок о вас и вашем опыте</li>
           </ul>
-          <a className="button button--primary" href="mailto:hello@veloturyug.ru">
-            hello@veloturyug.ru
-          </a>
+          <div className="booking-card__actions">
+            <a className="button button--primary" href="mailto:hello@veloturyug.ru">
+              Написать на email
+            </a>
+            <a className="button button--ghost-light" href="#top">
+              Вернуться наверх
+            </a>
+          </div>
         </div>
       </section>
     </main>
