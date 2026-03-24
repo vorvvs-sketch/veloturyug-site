@@ -531,6 +531,34 @@ h3 {
   margin-top: 22px;
 }
 
+.contact-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.contact-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 247, 241, 0.18);
+}
+
+.contact-chip__label {
+  color: rgba(255, 247, 241, 0.7);
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.contact-chip strong {
+  color: #fff7f1;
+  font-size: 1rem;
+}
+
 .button--ghost-light {
   border: 1px solid rgba(255, 247, 241, 0.32);
   background: rgba(255, 255, 255, 0.08);

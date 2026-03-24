@@ -119,14 +119,14 @@ const directions = [
 
 const organizers = [
   {
-    title: "Организатор маршрута",
+    title: "Василий",
     text:
-      "Ты собираешь группу, отвечаешь за общую атмосферу поездки и развиваешь проект как понятный формат отдыха выходного дня."
+      "Организатор проекта. Собирает группу, ведет запись, отвечает за атмосферу поездки и развитие формата однодневных e-bike туров."
   },
   {
-    title: "Напарник с опытом велопоходов",
+    title: "Сергей",
     text:
-      "Второй человек в команде помогает с маршрутом, темпом группы и практической частью выезда, чтобы участники чувствовали себя спокойнее."
+      "Напарник с опытом велопоходов. Помогает с маршрутом, темпом группы и практической частью выезда, чтобы участники чувствовали себя уверенно."
   }
 ];
 
@@ -136,6 +136,29 @@ const trustPoints = [
   "Электровелосипеды для комфортного старта даже новичкам",
   "Сопровождение на всем маршруте",
   "Формат знакомства, общения и красивого активного выходного"
+];
+
+const contacts = [
+  {
+    label: "Василий",
+    value: "8 910 994-99-09",
+    href: "tel:+79109949909"
+  },
+  {
+    label: "Сергей",
+    value: "8 961 525-55-59",
+    href: "tel:+79615255559"
+  },
+  {
+    label: "Telegram",
+    value: "@vs_voropaev",
+    href: "https://t.me/vs_voropaev"
+  },
+  {
+    label: "WhatsApp",
+    value: "Написать Сергею",
+    href: "https://wa.me/79615255559"
+  }
 ];
 
 export default function HomePage() {
@@ -383,12 +406,20 @@ export default function HomePage() {
             <li>Несколько реальных фото с маршрутов</li>
             <li>Короткий блок о вас и вашем опыте</li>
           </ul>
+          <div className="contact-list">
+            {contacts.map((contact) => (
+              <a className="contact-chip" href={contact.href} key={contact.label}>
+                <span className="contact-chip__label">{contact.label}</span>
+                <strong>{contact.value}</strong>
+              </a>
+            ))}
+          </div>
           <div className="booking-card__actions">
-            <a className="button button--primary" href="mailto:hello@veloturyug.ru">
-              Написать на email
+            <a className="button button--primary" href="https://wa.me/79615255559">
+              Написать в WhatsApp
             </a>
-            <a className="button button--ghost-light" href="#top">
-              Вернуться наверх
+            <a className="button button--ghost-light" href="https://t.me/vs_voropaev">
+              Открыть Telegram
             </a>
           </div>
         </div>
