@@ -405,6 +405,15 @@ const audiences = [
   }
 ];
 
+const whyUs = [
+  "Малые группы до 8-10 человек вместо массовых выездов",
+  "Два человека в команде: организация, маршрут и сопровождение",
+  "Свои электровелосипеды, а не случайная аренда под каждую поездку",
+  "Живая Telegram-группа как точка общения и анонсов",
+  "Маршруты под туристический формат, а не под спортивную гонку",
+  "Понятный вход для новичков, пар, друзей и мини-групп"
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -585,6 +594,25 @@ export default function HomePage() {
             <article className="trust-item" key={point}>
               <span className="trust-item__mark" />
               <p>{point}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section__heading">
+          <p className="eyebrow">Почему именно с нами</p>
+          <h2>Сильные стороны проекта, которые реально важны клиенту</h2>
+          <p className="section__text">
+            Этот формат опирается не на абстрактные обещания, а на понятную
+            организацию, сопровождение и живую подачу маршрутов.
+          </p>
+        </div>
+        <div className="why-grid">
+          {whyUs.map((item) => (
+            <article className="why-card" key={item}>
+              <span className="trust-item__mark" />
+              <p>{item}</p>
             </article>
           ))}
         </div>

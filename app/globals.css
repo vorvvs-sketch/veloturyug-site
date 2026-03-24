@@ -533,7 +533,8 @@ h3 {
 
 .schedule-list,
 .level-list,
-.audience-grid {
+.audience-grid,
+.why-grid {
   display: grid;
   gap: 14px;
 }
@@ -542,9 +543,14 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.why-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .schedule-item,
 .level-item,
-.audience-card {
+.audience-card,
+.why-card {
   padding: 18px 20px;
   border-radius: 20px;
   background: rgba(255, 248, 238, 0.82);
@@ -566,10 +572,17 @@ h3 {
 
 .schedule-item p,
 .level-item p,
-.audience-card p {
+.audience-card p,
+.why-card p {
   margin-bottom: 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.why-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
 }
 
 .schedule-item span {
@@ -817,7 +830,8 @@ h3 {
   .promo-banner,
   .mood-grid,
   .community-card,
-  .audience-grid {
+  .audience-grid,
+  .why-grid {
     grid-template-columns: 1fr;
   }
 
