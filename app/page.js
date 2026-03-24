@@ -930,6 +930,45 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <footer className="site-footer">
+        <div className="site-footer__brand">
+          <p className="eyebrow">ВелоТур Юг</p>
+          <h2>Однодневные e-bike выезды по югу России</h2>
+          <p className="section__text">
+            Организованные маршруты выходного дня по Краснодару, краю, Адыгее и
+            будущим направлениям проекта.
+          </p>
+        </div>
+        <div className="site-footer__columns">
+          <div>
+            <p className="site-footer__title">Навигация</p>
+            <ul className="footer-list">
+              <li><a href="#tours">Маршруты</a></li>
+              <li><a href="#about">О проекте</a></li>
+              <li><a href="#safety">Безопасность</a></li>
+              <li><a href="#booking">Запись</a></li>
+            </ul>
+          </div>
+          <div>
+            <p className="site-footer__title">Контакты</p>
+            <ul className="footer-list">
+              <li><a href="tel:+79109949909">Василий: 8 910 994-99-09</a></li>
+              <li><a href="tel:+79615255559">Сергей: 8 961 525-55-59</a></li>
+              <li><a href="https://t.me/vs_voropaev">Telegram</a></li>
+              <li><a href="https://wa.me/79615255559">WhatsApp</a></li>
+            </ul>
+          </div>
+          <div>
+            <p className="site-footer__title">Информация</p>
+            <ul className="footer-list">
+              <li><a href="/contacts">Контакты и запись</a></li>
+              <li><a href="/rules">Правила участия</a></li>
+              <li><a href="/insurance">Страховка и переносы</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
