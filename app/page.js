@@ -375,6 +375,13 @@ const bookingSteps = [
   "В день выезда встречаемся, проводим инструктаж и едем маршрут."
 ];
 
+const ebikeReasons = [
+  "Маршрут становится доступнее даже тем, кто давно не катался.",
+  "Подъемы и длинные участки проходятся комфортнее и без перегруза.",
+  "В группе легче держать общий темп, даже если участники разного уровня.",
+  "Можно больше смотреть по сторонам, фотографироваться и получать удовольствие от самой поездки."
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -632,6 +639,26 @@ export default function HomePage() {
               ))}
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section className="section section--split">
+        <div className="ebike-panel">
+          <p className="eyebrow">Почему именно e-bike</p>
+          <h2>Электровелосипед снимает барьер входа и делает тур гораздо комфортнее</h2>
+          <p className="section__text">
+            Для коммерческого тура это один из главных плюсов формата. Человек
+            не должен быть спортсменом, чтобы поехать на красивый маршрут и
+            получить удовольствие от дня на природе.
+          </p>
+        </div>
+        <div className="ebike-list">
+          {ebikeReasons.map((reason) => (
+            <article className="ebike-item" key={reason}>
+              <span className="trust-item__mark" />
+              <p>{reason}</p>
+            </article>
+          ))}
         </div>
       </section>
 
