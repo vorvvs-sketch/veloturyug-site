@@ -414,6 +414,14 @@ const whyUs = [
   "Понятный вход для новичков, пар, друзей и мини-групп"
 ];
 
+const safetyPoints = [
+  "Перед каждым выездом мы проверяем маршрут, технику и погодные условия.",
+  "Перед стартом участники проходят краткий инструктаж по формату поездки и правилам движения в группе.",
+  "Маршрут и темп подбираются под уровень группы, а при необходимости могут быть скорректированы.",
+  "При небезопасных погодных условиях выезд переносится или меняется на более подходящий формат.",
+  "Организатор вправе не допустить участника до старта при явных обстоятельствах, мешающих безопасному участию."
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -425,8 +433,10 @@ export default function HomePage() {
         <nav className="topbar__nav" aria-label="Навигация по странице">
           <a href="#tours">Маршруты</a>
           <a href="#about">О проекте</a>
+          <a href="#safety">Безопасность</a>
           <a href="#prices">Цены</a>
           <a href="#booking">Запись</a>
+          <a href="/rules">Правила</a>
         </nav>
       </header>
 
@@ -435,9 +445,9 @@ export default function HomePage() {
           <p className="eyebrow">VeloturYug.ru</p>
           <h1>Однодневные e-bike туры по югу России</h1>
           <p className="hero__lead">
-            Авторские поездки по Краснодару, Краснодарскому краю и Адыгее на
-            электровелосипедах с сопровождением, красивыми маршрутами и малой
-            группой до 10 человек.
+            Организованные однодневные e-bike выезды по Краснодару,
+            Краснодарскому краю и Адыгее с красивыми маршрутами, продуманной
+            логистикой и малой группой до 10 человек.
           </p>
           <div className="hero__actions">
             <a className="button button--primary" href="#booking">
@@ -574,6 +584,26 @@ export default function HomePage() {
           {benefits.map((benefit) => (
             <article className="reason-card" key={benefit}>
               <p>{benefit}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="safety">
+        <div className="section__heading">
+          <p className="eyebrow">Безопасность</p>
+          <h2>Маршрут, темп и организация подстраиваются под реальную безопасность группы</h2>
+          <p className="section__text">
+            Мы не обещаем невозможного и не подаем выезды как экстремальный
+            формат. На старте важны понятные правила, спокойный темп, проверка
+            условий и аккуратная организация.
+          </p>
+        </div>
+        <div className="why-grid">
+          {safetyPoints.map((item) => (
+            <article className="why-card" key={item}>
+              <span className="trust-item__mark" />
+              <p>{item}</p>
             </article>
           ))}
         </div>
@@ -860,6 +890,9 @@ export default function HomePage() {
             </a>
             <a className="button button--ghost-light" href="https://t.me/vs_voropaev">
               Открыть Telegram
+            </a>
+            <a className="button button--ghost-light" href="/rules">
+              Правила участия
             </a>
           </div>
         </div>
