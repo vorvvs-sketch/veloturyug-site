@@ -382,6 +382,29 @@ const ebikeReasons = [
   "Можно больше смотреть по сторонам, фотографироваться и получать удовольствие от самой поездки."
 ];
 
+const audiences = [
+  {
+    title: "Пары",
+    text:
+      "Для тех, кто хочет необычный красивый выходной, а не просто прогулку по одному и тому же маршруту."
+  },
+  {
+    title: "Новички",
+    text:
+      "Для людей без серьезной подготовки, которым нужен мягкий вход в велотуризм без страха не справиться."
+  },
+  {
+    title: "Туристы",
+    text:
+      "Для гостей региона, которые хотят увидеть природу и красивые локации не из окна машины, а в живом формате."
+  },
+  {
+    title: "Мини-группы и компании",
+    text:
+      "Для друзей, небольших корпоративных команд и компаний, которым нужен готовый активный день с организацией."
+  }
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -657,6 +680,25 @@ export default function HomePage() {
             <article className="ebike-item" key={reason}>
               <span className="trust-item__mark" />
               <p>{reason}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section__heading">
+          <p className="eyebrow">Для кого это</p>
+          <h2>Мы продаем формат, который подходит не одной узкой аудитории</h2>
+          <p className="section__text">
+            Однодневные e-bike туры можно упаковывать по-разному, и это делает
+            проект сильнее как бизнес, а не только как хобби.
+          </p>
+        </div>
+        <div className="audience-grid">
+          {audiences.map((audience) => (
+            <article className="audience-card" key={audience.title}>
+              <h3>{audience.title}</h3>
+              <p>{audience.text}</p>
             </article>
           ))}
         </div>
