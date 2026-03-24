@@ -447,6 +447,31 @@ const safetyPoints = [
   "Организатор вправе не допустить участника до старта при явных обстоятельствах, мешающих безопасному участию."
 ];
 
+const quickReasons = [
+  "Не нужен спортивный опыт",
+  "Маршруты одним днем",
+  "Красивые локации без перегруза",
+  "Подходит парам, друзьям и мини-группам"
+];
+
+const lifestylePoints = [
+  {
+    title: "Для занятых людей",
+    text:
+      "Не нужно брать отпуск, собирать многодневный поход и выпадать из жизни на несколько дней."
+  },
+  {
+    title: "Для взрослых новичков",
+    text:
+      "Формат подходит тем, кто хочет активность и впечатления, но без жесткой спортивной гонки."
+  },
+  {
+    title: "Для тех, кто ценит комфорт",
+    text:
+      "Электровелосипед, сопровождение, понятный ритм и продуманный маршрут делают выезд спокойнее и приятнее."
+  }
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -470,19 +495,27 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero__content">
           <p className="eyebrow">VeloturYug.ru</p>
-          <h1>Однодневные e-bike туры по югу России</h1>
+          <h1>Однодневные e-bike выезды, на которые легко решиться</h1>
           <p className="hero__lead">
-            Организованные однодневные e-bike выезды по Краснодару,
-            Краснодарскому краю и Адыгее с красивыми маршрутами, продуманной
-            логистикой и малой группой до 10 человек.
+            Красивые маршруты по Краснодару, краю и Адыгее для людей, которым
+            нужен живой активный отдых без жесткой подготовки, лишнего стресса и
+            сложной организации.
           </p>
           <div className="hero__actions">
             <a className="button button--primary" href="#booking">
-              Оставить заявку
+              Выбрать выезд
             </a>
             <a className="button button--ghost" href="#tours">
-              Выбрать маршрут
+              Смотреть маршруты
             </a>
+          </div>
+          <div className="hero__quick-grid">
+            {quickReasons.map((item) => (
+              <div className="hero__quick-item" key={item}>
+                <span className="trust-item__mark" />
+                <p>{item}</p>
+              </div>
+            ))}
           </div>
           <ul className="hero__stats" aria-label="Преимущества">
             <li>
@@ -514,6 +547,18 @@ export default function HomePage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="lifestyle-grid">
+          {lifestylePoints.map((item) => (
+            <article className="lifestyle-card" key={item.title}>
+              <p className="eyebrow">Кому это близко</p>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
