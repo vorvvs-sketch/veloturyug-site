@@ -321,6 +321,40 @@ h3 {
   letter-spacing: 0.16em;
 }
 
+.section--promo {
+  padding-top: 4px;
+}
+
+.promo-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 24px;
+  padding: 30px;
+  border-radius: 30px;
+  background:
+    linear-gradient(130deg, rgba(255, 247, 234, 0.95), rgba(246, 234, 210, 0.86)),
+    radial-gradient(circle at top right, rgba(189, 92, 45, 0.15), transparent 30%);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.promo-banner__aside {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.promo-banner__aside span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(33, 37, 28, 0.08);
+  color: var(--text);
+}
+
 .tour-card__meta {
   display: flex;
   flex-wrap: wrap;
@@ -576,7 +610,8 @@ h3 {
   .booking,
   .tour-grid,
   .faq-list,
-  .pricing-grid {
+  .pricing-grid,
+  .promo-banner {
     grid-template-columns: 1fr;
   }
 
