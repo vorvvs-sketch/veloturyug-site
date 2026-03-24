@@ -436,6 +436,7 @@ export default function HomePage() {
           <a href="#safety">Безопасность</a>
           <a href="#prices">Цены</a>
           <a href="#booking">Запись</a>
+          <a href="/contacts">Контакты</a>
           <a href="/rules">Правила</a>
           <a href="/insurance">Страховка</a>
         </nav>
@@ -891,6 +892,9 @@ export default function HomePage() {
             </a>
             <a className="button button--ghost-light" href="https://t.me/vs_voropaev">
               Открыть Telegram
+            </a>
+            <a className="button button--ghost-light" href="/contacts">
+              Контакты и запись
             </a>
             <a className="button button--ghost-light" href="/rules">
               Правила участия
