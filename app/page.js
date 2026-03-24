@@ -437,6 +437,7 @@ export default function HomePage() {
           <a href="#prices">Цены</a>
           <a href="#booking">Запись</a>
           <a href="/rules">Правила</a>
+          <a href="/insurance">Страховка</a>
         </nav>
       </header>
 
@@ -893,6 +894,9 @@ export default function HomePage() {
             </a>
             <a className="button button--ghost-light" href="/rules">
               Правила участия
+            </a>
+            <a className="button button--ghost-light" href="/insurance">
+              Страховка и переносы
             </a>
           </div>
         </div>
