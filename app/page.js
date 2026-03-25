@@ -1236,6 +1236,15 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      <div className="mobile-cta">
+        <a className="mobile-cta__link mobile-cta__link--ghost" href="#tours">
+          Маршруты
+        </a>
+        <a className="mobile-cta__link" href="https://wa.me/79615255559">
+          WhatsApp
+        </a>
+      </div>
     </main>
   );
 }
