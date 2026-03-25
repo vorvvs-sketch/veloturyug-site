@@ -163,7 +163,7 @@ const contacts = [
   {
     label: "MAX Василий",
     value: "8 910 994-99-09",
-    href: "tel:+79109949909"
+    href: "https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc"
   },
   {
     label: "MAX Сергей",
@@ -238,7 +238,7 @@ export default function HomePage() {
             <a className="button button--primary" href="#tours">
               Выбрать маршрут
             </a>
-            <a className="button button--ghost" href="tel:+79109949909">
+            <a className="button button--ghost" href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">
               Связаться в MAX
             </a>
           </div>
@@ -392,7 +392,7 @@ export default function HomePage() {
         </div>
         <div className="booking-card">
           <div className="booking-card__actions booking-card__actions--top">
-            <a className="button button--primary" href="tel:+79109949909">
+            <a className="button button--primary" href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">
               MAX Василий
             </a>
             <a className="button button--ghost-light" href="https://t.me/vs_voropaev">
@@ -438,7 +438,7 @@ export default function HomePage() {
           <div>
             <p className="site-footer__title">Контакты</p>
             <ul className="footer-list">
-              <li><a href="tel:+79109949909">MAX Василий: 8 910 994-99-09</a></li>
+              <li><a href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">MAX Василий</a></li>
               <li><a href="tel:+79615255559">MAX Сергей: 8 961 525-55-59</a></li>
               <li><a href="https://t.me/vs_voropaev">Telegram Василий</a></li>
               <li><a href="https://t.me/SMNemtsev">Telegram Сергей</a></li>
@@ -459,7 +459,7 @@ export default function HomePage() {
         <a className="mobile-cta__link mobile-cta__link--ghost" href="#tours">
           Маршруты
         </a>
-        <a className="mobile-cta__link" href="tel:+79109949909">
+        <a className="mobile-cta__link" href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">
           MAX
         </a>
       </div>

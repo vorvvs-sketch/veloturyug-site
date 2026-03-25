@@ -9,8 +9,8 @@ const bookingChannels = [
     title: "MAX Василий",
     text:
       "Основной контакт по вопросам записи, формата выезда и общих деталей проекта.",
-    linkLabel: "Позвонить 8 910 994-99-09",
-    href: "tel:+79109949909"
+    linkLabel: "Открыть MAX Василия",
+    href: "https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc"
   },
   {
     title: "MAX Сергей",
@@ -105,11 +105,11 @@ export default function ContactsPage() {
         <article className="legal-card legal-card--accent">
           <h2>Как удобнее связаться</h2>
           <p className="section__text">
-            Сейчас основной и самый надежный способ связи для проекта - MAX и
-            Telegram. Можно выбрать любой удобный контакт выше.
+            Сейчас основной и самый надежный способ связи для проекта - MAX Василия
+            и Telegram. Можно выбрать любой удобный контакт выше.
           </p>
-          <a className="button button--primary" href="https://t.me/vs_voropaev">
-            Написать в Telegram
+          <a className="button button--primary" href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">
+            Открыть MAX
           </a>
         </article>
       </section>
