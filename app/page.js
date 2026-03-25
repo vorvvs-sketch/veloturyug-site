@@ -205,6 +205,57 @@ const usefulLinks = [
   }
 ];
 
+const aboutCards = [
+  {
+    title: "Кто мы",
+    text:
+      "Мы local-команда, которая любит юг России, красивые маршруты и живой формат поездок без суеты и показной сложности."
+  },
+  {
+    title: "Какой у нас подход",
+    text:
+      "Мы собираем небольшие группы, подбираем понятный темп, продумываем маршрут заранее и делаем выезд комфортным даже для тех, кто давно не катался."
+  },
+  {
+    title: "Что для нас важно",
+    text:
+      "Не просто прокатиться, а провести хороший день: красивые места, нормальная организация, общение и ощущение настоящего маленького путешествия."
+  }
+];
+
+const whyUs = [
+  {
+    title: "Продуманные маршруты",
+    text:
+      "Мы не ведем группу наугад. Маршруты подбираются под формат одного дня, красивые точки и удобный темп."
+  },
+  {
+    title: "Формат для новичков",
+    text:
+      "Электровелосипеды снимают лишнюю нагрузку и делают поездку доступнее для широкой аудитории."
+  },
+  {
+    title: "Малые группы",
+    text:
+      "Небольшой состав дает больше внимания к людям, спокойнее темп и более живую атмосферу."
+  },
+  {
+    title: "Сопровождение",
+    text:
+      "Вы не остаетесь один на маршруте. Есть понятная организация, связь и сопровождение по ходу выезда."
+  },
+  {
+    title: "Красивые локации",
+    text:
+      "Маршруты строятся не ради километров, а ради видов, впечатлений, остановок и хорошего дня на природе."
+  },
+  {
+    title: "Живой подход",
+    text:
+      "Это не безликий поток. Нам важно, чтобы людям было комфортно, интересно и хотелось вернуться снова."
+  }
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -291,6 +342,36 @@ export default function HomePage() {
           {keyPoints.map((item) => (
             <article className="lifestyle-card" key={item.title}>
               <p className="eyebrow">Почему это удобно</p>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section__heading">
+          <p className="eyebrow">О нас</p>
+          <h2>Кто мы и почему этот проект вообще появился</h2>
+        </div>
+        <div className="audience-grid">
+          {aboutCards.map((item) => (
+            <article className="audience-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section__heading">
+          <p className="eyebrow">Почему с нами</p>
+          <h2>Почему стоит ехать именно с нами</h2>
+        </div>
+        <div className="why-grid">
+          {whyUs.map((item) => (
+            <article className="why-card" key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
