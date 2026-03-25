@@ -220,6 +220,10 @@ h3 {
   margin: 28px 0 32px;
 }
 
+.hero__support {
+  max-width: 36rem;
+}
+
 .hero__quick-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -349,8 +353,71 @@ h3 {
 
 .lifestyle-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
+}
+
+.project-note {
+  padding: 34px 36px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(130deg, rgba(255, 255, 255, 0.9), rgba(246, 240, 230, 0.9)),
+    radial-gradient(circle at top right, rgba(72, 105, 93, 0.1), transparent 30%);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.project-note__text {
+  max-width: 760px;
+  display: grid;
+  gap: 14px;
+}
+
+.project-note__text p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.formats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.trust-details-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.format-card {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(20, 32, 43, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.format-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.trust-detail-card {
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(20, 32, 43, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.trust-detail-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .lifestyle-card {
@@ -493,6 +560,17 @@ h3 {
 
 .tour-card h3 {
   max-width: 16ch;
+}
+
+.tour-card__audience {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.tour-card__audience strong {
+  color: var(--text);
 }
 
 .section--split,
@@ -675,6 +753,27 @@ h3 {
   background: rgba(189, 92, 45, 0.12);
   color: var(--accent-dark);
   white-space: nowrap;
+}
+
+.price-highlight {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 28px 30px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(130deg, rgba(255, 255, 255, 0.9), rgba(244, 236, 223, 0.92)),
+    radial-gradient(circle at top right, rgba(207, 109, 53, 0.12), transparent 28%);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.price-highlight__value {
+  margin-bottom: 12px;
+  color: var(--accent-dark);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
 }
 
 .plain-list {
@@ -866,6 +965,11 @@ h3 {
   margin-top: 22px;
 }
 
+.booking-card__actions--top {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
 .contact-list {
   display: grid;
   gap: 12px;
@@ -892,6 +996,43 @@ h3 {
 .contact-chip strong {
   color: #fff7f1;
   font-size: 1rem;
+}
+
+.booking-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.booking-form__field {
+  display: grid;
+  gap: 8px;
+}
+
+.booking-form__field span {
+  color: rgba(255, 247, 241, 0.86);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.booking-form input,
+.booking-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 247, 241, 0.2);
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff7f1;
+  font: inherit;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: rgba(255, 247, 241, 0.58);
+}
+
+.booking-form__submit {
+  width: 100%;
 }
 
 .button--ghost-light {
@@ -1032,7 +1173,10 @@ h3 {
   .site-footer,
   .site-footer__columns,
   .lifestyle-grid,
-  .hero__quick-grid {
+  .hero__quick-grid,
+  .formats-grid,
+  .price-highlight,
+  .trust-details-grid {
     grid-template-columns: 1fr;
   }
 

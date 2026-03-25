@@ -1,3 +1,5 @@
+import BookingForm from "./components/booking-form";
+
 const tourGroups = [
   {
     title: "Легкие туры",
@@ -8,9 +10,12 @@ const tourGroups = [
         title: "Парк Краснодар утром",
         location: "Краснодар",
         distance: "10-18 км",
+        difficulty: "Легкий",
+        duration: "2-4 часа",
         pace: "Легкий",
         summary:
           "Ранний городской e-bike выезд с 5:00 до 9:00, пока парк особенно красив и свободен.",
+        audience: "Новичкам, парам, занятым людям",
         features: [
           "Фирменная фишка проекта",
           "Маршрут для промо",
@@ -21,9 +26,12 @@ const tourGroups = [
         title: "Краснодар зелёный",
         location: "Краснодар",
         distance: "18-28 км",
+        difficulty: "Легкий",
+        duration: "3-5 часов",
         pace: "Спокойный",
         summary:
           "Спокойный маршрут по зеленым зонам города с мягким темпом и остановками.",
+        audience: "Новичкам, семьям, любителям природы",
         features: [
           "Городской scenic ride",
           "Подходит семьям и парам",
@@ -34,9 +42,12 @@ const tourGroups = [
         title: "Кубанский loop",
         location: "Краснодар / Новая Адыгея",
         distance: "22-35 км",
+        difficulty: "Легкий-средний",
+        duration: "4-6 часов",
         pace: "Легкий-средний",
         summary:
           "Круговой маршрут через Краснодар, Яблоновский и Новую Адыгею для первого полноценного однодневного выезда.",
+        audience: "Парам, друзьям, мини-группам",
         features: [
           "Кольцевой маршрут",
           "Подходит для первых групп",
@@ -54,9 +65,12 @@ const tourGroups = [
         title: "Абрау-Дюрсо classic",
         location: "Абрау-Дюрсо",
         distance: "30-45 км",
+        difficulty: "Средний",
+        duration: "5-7 часов",
         pace: "Комфортный",
         summary:
           "Озеро, виноградники, красивые дороги и южная атмосфера выходного дня.",
+        audience: "Парам, туристам, любителям красивых маршрутов",
         features: [
           "Видовые точки",
           "Премиальная локация",
@@ -67,9 +81,12 @@ const tourGroups = [
         title: "Горячий Ключ: Скала Зеркало",
         location: "Горячий Ключ",
         distance: "25-40 км",
+        difficulty: "Средний",
+        duration: "5-6 часов",
         pace: "Средний",
         summary:
           "Лесной маршрут с природной достопримечательностью и хорошим форматом для e-bike тура.",
+        audience: "Любителям природы, тем кто хочет маршрут поинтереснее",
         features: [
           "Близко к Краснодару",
           "Лес и природа",
@@ -80,9 +97,12 @@ const tourGroups = [
         title: "Каменномостский - Хаджох - Руфабго",
         location: "Адыгея",
         distance: "20-30 км",
+        difficulty: "Средний",
+        duration: "5-7 часов",
         pace: "Средний",
         summary:
           "Один из самых туристических и впечатляющих маршрутов в Адыгее.",
+        audience: "Туристам, парам, любителям природных мест",
         features: [
           "Туристические точки",
           "Хорош для гостей региона",
@@ -93,9 +113,12 @@ const tourGroups = [
         title: "ВелоSea: Геленджик - Кабардинка",
         location: "Геленджик / Кабардинка",
         distance: "25-40 км",
+        difficulty: "Средний",
+        duration: "5-7 часов",
         pace: "Прогулочный",
         summary:
           "Море, красивые виды, набережные и фототочки. Один из самых ярких маршрутов для узнаваемого старта проекта.",
+        audience: "Парам, друзьям, туристам",
         features: [
           "Морской маршрут",
           "Подходит для рекламы",
@@ -113,9 +136,12 @@ const tourGroups = [
         title: "Гуамка - Мезмай",
         location: "Краснодарский край",
         distance: "22-35 км",
+        difficulty: "Сложнее среднего",
+        duration: "6-8 часов",
         pace: "Средний-сильный",
         summary:
           "Один из самых красивых горных маршрутов для мотивированной аудитории и premium-подачи.",
+        audience: "Тем, кто хочет более насыщенный и сильный маршрут",
         features: [
           "Горный scenic",
           "Сильное впечатление",
@@ -126,9 +152,12 @@ const tourGroups = [
         title: "Севастополь - Балаклава",
         location: "Крым",
         distance: "25-45 км",
+        difficulty: "Средний",
+        duration: "5-7 часов",
         pace: "Средний",
         summary:
           "Видовой крымский маршрут с сильным туристическим потенциалом и премиальным ощущением поездки.",
+        audience: "Туристам, парам, мини-группам",
         features: [
           "Крымский туристический формат",
           "Подходит для мини-групп",
@@ -146,9 +175,12 @@ const tourGroups = [
         title: "Лаго-Наки viewpoints",
         location: "Адыгея",
         distance: "20-35 км",
+        difficulty: "Сложный",
+        duration: "6-8 часов",
         pace: "Сильный",
         summary:
           "Высотный видовой маршрут, который требует более точной подготовки и погодного окна.",
+        audience: "Тем, кто любит сильные и видовые выезды",
         features: [
           "Высокий вау-эффект",
           "Для сильной аудитории",
@@ -159,9 +191,12 @@ const tourGroups = [
         title: "Сукко - Большой Утриш",
         location: "Сукко / Утриш",
         distance: "25-35 км",
+        difficulty: "Средний",
+        duration: "5-6 часов",
         pace: "Комфортный",
         summary:
           "Побережье, можжевеловые пейзажи и сильная визуальная подача для будущих выездов.",
+        audience: "Любителям моря, природы и красивых локаций",
         features: [
           "Море и природа",
           "Хорош для фото",
@@ -172,9 +207,12 @@ const tourGroups = [
         title: "Шапсугская: дольмены и вулкан",
         location: "Краснодарский край",
         distance: "20-35 км",
+        difficulty: "Средний",
+        duration: "5-7 часов",
         pace: "Средний",
         summary:
           "Более приключенческий маршрут с природными и археологическими точками интереса.",
+        audience: "Любителям необычных маршрутов и новых впечатлений",
         features: [
           "Нестандартная подача",
           "Adventure-формат",
@@ -185,9 +223,12 @@ const tourGroups = [
         title: "Тамань - Веселовка - Бугазская коса",
         location: "Тамань",
         distance: "25-45 км",
+        difficulty: "Средний",
+        duration: "5-7 часов",
         pace: "Средний",
         summary:
           "Морской и ветреный маршрут с сильной атмосферой, который лучше запускать после точной логистической подготовки.",
+        audience: "Любителям моря, простора и ярких южных маршрутов",
         features: [
           "Южный coastal vibe",
           "Нужна погодная осторожность",
@@ -447,6 +488,57 @@ const safetyPoints = [
   "Организатор вправе не допустить участника до старта при явных обстоятельствах, мешающих безопасному участию."
 ];
 
+const tourFormats = [
+  {
+    title: "Лёгкие",
+    text:
+      "Подходят для первого знакомства с форматом, спокойного темпа и тех, кто хочет красивый день без перегруза."
+  },
+  {
+    title: "Видовые",
+    text:
+      "Маршруты ради красивых мест, панорам, фототочек и ощущения настоящего небольшого путешествия."
+  },
+  {
+    title: "Горные",
+    text:
+      "Более насыщенные выезды с рельефом, природой и ощущением сильного маршрута для тех, кому хочется ярче."
+  },
+  {
+    title: "Премиальные",
+    text:
+      "Самые впечатляющие маршруты с сильной атмосферой, красивой подачей и форматом для особого выезда."
+  }
+];
+
+const trustDetails = [
+  {
+    title: "Сопровождение",
+    text:
+      "Группа едет не одна: маршрут проходит с сопровождением и понятным темпом."
+  },
+  {
+    title: "Безопасность",
+    text:
+      "Перед выездом мы смотрим условия маршрута, технику и формат группы."
+  },
+  {
+    title: "Продуманные маршруты",
+    text:
+      "Маршруты подбираются не ради километров, а ради впечатлений, видов и удобства формата."
+  },
+  {
+    title: "Комфорт",
+    text:
+      "Электровелосипеды, остановки, понятный ритм и однодневный формат делают выезд легче."
+  },
+  {
+    title: "Живой подход",
+    text:
+      "Это не потоковый сервис, а человеческий формат с общением, вниманием и атмосферой."
+  }
+];
+
 const quickReasons = [
   "Не нужен спортивный опыт",
   "Маршруты одним днем",
@@ -456,19 +548,24 @@ const quickReasons = [
 
 const lifestylePoints = [
   {
-    title: "Для занятых людей",
+    title: "Для новичков",
     text:
-      "Не нужно брать отпуск, собирать многодневный поход и выпадать из жизни на несколько дней."
+      "Подходит даже тем, кто давно не катался. Электровелосипед помогает ехать спокойнее и увереннее."
   },
   {
-    title: "Для взрослых новичков",
+    title: "Для пар и компаний",
     text:
-      "Формат подходит тем, кто хочет активность и впечатления, но без жесткой спортивной гонки."
+      "Можно поехать вдвоем, с друзьями или небольшой компанией и провести красивый день вместе."
   },
   {
-    title: "Для тех, кто ценит комфорт",
+    title: "Для любителей природы",
     text:
-      "Электровелосипед, сопровождение, понятный ритм и продуманный маршрут делают выезд спокойнее и приятнее."
+      "Маршруты проходят по красивым местам, где хочется смотреть по сторонам, останавливаться и просто наслаждаться дорогой."
+  },
+  {
+    title: "Для тех, кто хочет посильнее",
+    text:
+      "Есть и более насыщенные маршруты для тех, кому хочется длиннее, ярче и с более сильным впечатлением от поездки."
   }
 ];
 
@@ -495,18 +592,21 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero__content">
           <p className="eyebrow">VeloturYug.ru</p>
-          <h1>Однодневные e-bike выезды, на которые легко решиться</h1>
+          <h1>Вело-туры на электровелосипедах в Краснодарском крае</h1>
           <p className="hero__lead">
-            Красивые маршруты по Краснодару, краю и Адыгее для людей, которым
-            нужен живой активный отдых без жесткой подготовки, лишнего стресса и
-            сложной организации.
+            Однодневные маршруты по красивым местам Краснодарского края, Адыгеи
+            и Крыма. Подходит даже новичкам.
+          </p>
+          <p className="section__text hero__support">
+            Красивые локации, продуманные маршруты, сопровождение и живые
+            впечатления за один день.
           </p>
           <div className="hero__actions">
-            <a className="button button--primary" href="#booking">
-              Выбрать выезд
+            <a className="button button--primary" href="#tours">
+              Выбрать маршрут
             </a>
-            <a className="button button--ghost" href="#tours">
-              Смотреть маршруты
+            <a className="button button--ghost" href="https://wa.me/79615255559">
+              Написать в WhatsApp
             </a>
           </div>
           <div className="hero__quick-grid">
@@ -551,14 +651,69 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <div className="project-note">
+          <p className="eyebrow">О проекте</p>
+          <h2>Мы любим свою страну и свой край</h2>
+          <div className="project-note__text">
+            <p>Любим путешествовать и открывать красивые места.</p>
+            <p>
+              В какой-то момент поняли, что есть свободная ниша — и из этого
+              родился этот проект.
+            </p>
+            <p>
+              Это не просто поездки. Это про атмосферу, людей и живые
+              впечатления.
+            </p>
+            <p>Друзья, добро пожаловать.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section__heading">
+          <p className="eyebrow">Форматы туров</p>
+          <h2>Можно выбрать не только маршрут, но и формат впечатления</h2>
+        </div>
+        <div className="formats-grid">
+          {tourFormats.map((format) => (
+            <article className="format-card" key={format.title}>
+              <h3>{format.title}</h3>
+              <p>{format.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
         <div className="lifestyle-grid">
           {lifestylePoints.map((item) => (
             <article className="lifestyle-card" key={item.title}>
-              <p className="eyebrow">Кому это близко</p>
+              <p className="eyebrow">Кому подойдет</p>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="project-note">
+          <p className="eyebrow">Как это устроено</p>
+          <h2>Понятный формат без лишней сложности</h2>
+          <div className="project-note__text">
+            <p>
+              Это однодневные выезды. Не нужно брать отпуск, собирать поход на
+              несколько дней и долго готовиться.
+            </p>
+            <p>
+              Мы делаем формат на электровелосипедах, чтобы маршрут был доступнее
+              и комфортнее даже для новичков.
+            </p>
+            <p>
+              На маршруте группа едет с сопровождением, в понятном темпе и с
+              остановками в красивых местах.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -632,8 +787,12 @@ export default function HomePage() {
                     <p>{tour.summary}</p>
                     <div className="tour-card__meta">
                       <span>{tour.distance}</span>
-                      <span>{tour.pace}</span>
+                      <span>{tour.difficulty}</span>
+                      <span>{tour.duration}</span>
                     </div>
+                    <p className="tour-card__audience">
+                      <strong>Кому подходит:</strong> {tour.audience}
+                    </p>
                     <ul className="tag-list">
                       {tour.features.map((feature) => (
                         <li key={feature}>{feature}</li>
@@ -696,6 +855,21 @@ export default function HomePage() {
             <article className="trust-item" key={point}>
               <span className="trust-item__mark" />
               <p>{point}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section__heading">
+          <p className="eyebrow">Доверие</p>
+          <h2>Важно не только куда ехать, но и как проходит сам выезд</h2>
+        </div>
+        <div className="trust-details-grid">
+          {trustDetails.map((item) => (
+            <article className="trust-detail-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
             </article>
           ))}
         </div>
@@ -882,7 +1056,30 @@ export default function HomePage() {
       <section className="section section--pricing" id="prices">
         <div className="section__heading">
           <p className="eyebrow">Цены</p>
-          <h2>Простая ценовая модель для первого запуска</h2>
+          <h2>Понятная стартовая стоимость без лишней сложности</h2>
+          <p className="section__text">
+            Стоимость зависит от маршрута, длительности и формата выезда, но
+            для первого понимания можно ориентироваться на такую базу.
+          </p>
+        </div>
+        <div className="price-highlight">
+          <div>
+            <p className="eyebrow">Базовая цена</p>
+            <h3 className="price-highlight__value">от 4 500 ₽ за человека</h3>
+            <p className="section__text">
+              Итоговая стоимость зависит от конкретного маршрута, даты и формата
+              участия.
+            </p>
+          </div>
+          <div>
+            <p className="eyebrow">Что входит в стоимость</p>
+            <ul className="checklist">
+              <li>электровелосипед для участия в выезде</li>
+              <li>организация маршрута и сопровождение</li>
+              <li>инструктаж перед стартом</li>
+              <li>остановки в красивых точках по маршруту</li>
+            </ul>
+          </div>
         </div>
         <div className="pricing-grid">
           {prices.map((price) => (
@@ -931,6 +1128,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="project-note">
+          <p className="eyebrow">Отзывы</p>
+          <h2>Сюда добавим реальные впечатления после первых выездов</h2>
+          <div className="project-note__text">
+            <p>
+              После запуска маршрутов здесь появятся живые отзывы участников,
+              короткие истории поездок и впечатления о формате.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="section booking" id="booking">
         <div>
           <p className="eyebrow">Запись</p>
@@ -948,6 +1158,17 @@ export default function HomePage() {
             <li>Несколько реальных фото с маршрутов</li>
             <li>Короткий блок о вас и вашем опыте</li>
           </ul>
+          <div className="booking-card__actions booking-card__actions--top">
+            <a className="button button--primary" href="https://wa.me/79615255559">
+              WhatsApp
+            </a>
+            <a className="button button--ghost-light" href="https://t.me/vs_voropaev">
+              Telegram
+            </a>
+            <a className="button button--ghost-light" href="#tours">
+              Выбрать маршрут
+            </a>
+          </div>
           <div className="contact-list">
             {contacts.map((contact) => (
               <a className="contact-chip" href={contact.href} key={contact.label}>
@@ -956,6 +1177,7 @@ export default function HomePage() {
               </a>
             ))}
           </div>
+          <BookingForm />
           <div className="booking-card__actions">
             <a className="button button--primary" href="https://wa.me/79615255559">
               Написать в WhatsApp
