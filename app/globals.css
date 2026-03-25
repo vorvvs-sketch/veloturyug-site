@@ -1218,14 +1218,16 @@ h3 {
 @media (max-width: 640px) {
   .page-shell {
     width: min(100% - 20px, 1180px);
-    padding-top: 12px;
+    padding-top: 10px;
     padding-bottom: 108px;
   }
 
   h1 {
     max-width: none;
-    font-size: clamp(2.35rem, 13vw, 3.4rem);
-    line-height: 0.96;
+    font-size: clamp(2rem, 10.8vw, 2.85rem);
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+    margin-bottom: 16px;
   }
 
   h2 {
@@ -1238,20 +1240,25 @@ h3 {
   }
 
   .topbar {
-    padding: 14px 16px;
-    gap: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 14px;
+    gap: 10px;
     margin-bottom: 16px;
   }
 
   .topbar__brand {
-    font-size: 0.94rem;
+    font-size: 1rem;
+    line-height: 1.05;
   }
 
   .topbar__nav {
-    gap: 8px 12px;
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-start;
     overflow-x: auto;
     flex-wrap: nowrap;
-    padding-bottom: 2px;
+    padding: 2px 2px 4px;
     scrollbar-width: none;
   }
 
@@ -1260,8 +1267,9 @@ h3 {
   }
 
   .topbar__nav a {
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     white-space: nowrap;
+    padding: 8px 0;
   }
 
   .section {
@@ -1296,8 +1304,14 @@ h3 {
   .legal-header,
   .legal-card,
   .lifestyle-card {
-    padding: 20px;
+    padding: 18px;
     border-radius: 22px;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
   }
 
   .hero__lead,
@@ -1318,15 +1332,23 @@ h3 {
   .why-card p,
   .format-card p,
   .trust-detail-card p {
-    font-size: 0.96rem;
-    line-height: 1.64;
+    font-size: 0.95rem;
+    line-height: 1.58;
+  }
+
+  .hero__content {
+    padding: 18px;
+  }
+
+  .hero__support {
+    margin-top: 0;
   }
 
   .hero__actions,
   .booking-card__actions,
   .booking-card__actions--top {
     gap: 10px;
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .hero__actions .button,
@@ -1350,6 +1372,7 @@ h3 {
   }
 
   .hero__stats {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
