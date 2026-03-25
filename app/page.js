@@ -12,6 +12,7 @@ const tourGroups = [
         distance: "10-18 км",
         difficulty: "Легкий",
         duration: "2-4 часа",
+        price: "4 500 ₽",
         summary:
           "Ранний городской e-bike выезд с 5:00 до 9:00, пока парк особенно красив и свободен.",
         audience: "Новичкам, парам, занятым людям"
@@ -22,6 +23,7 @@ const tourGroups = [
         distance: "18-28 км",
         difficulty: "Легкий",
         duration: "3-5 часов",
+        price: "4 900 ₽",
         summary:
           "Спокойный маршрут по зеленым зонам города с остановками и мягким темпом.",
         audience: "Новичкам, семьям, любителям природы"
@@ -32,6 +34,7 @@ const tourGroups = [
         distance: "22-35 км",
         difficulty: "Легкий-средний",
         duration: "4-6 часов",
+        price: "5 500 ₽",
         summary:
           "Круговой маршрут через Краснодар, Яблоновский и Новую Адыгею для первого полноценного однодневного выезда.",
         audience: "Парам, друзьям, мини-группам"
@@ -49,6 +52,7 @@ const tourGroups = [
         distance: "30-45 км",
         difficulty: "Средний",
         duration: "5-7 часов",
+        price: "6 900 ₽",
         summary:
           "Озеро, виноградники, красивые дороги и южная атмосфера выходного дня.",
         audience: "Парам, туристам, любителям красивых маршрутов"
@@ -59,6 +63,7 @@ const tourGroups = [
         distance: "25-40 км",
         difficulty: "Средний",
         duration: "5-6 часов",
+        price: "6 500 ₽",
         summary:
           "Лесной маршрут с природной достопримечательностью и хорошим форматом для e-bike тура.",
         audience: "Любителям природы и более насыщенных маршрутов"
@@ -69,6 +74,7 @@ const tourGroups = [
         distance: "20-30 км",
         difficulty: "Средний",
         duration: "5-7 часов",
+        price: "6 700 ₽",
         summary:
           "Один из самых туристических и впечатляющих маршрутов в Адыгее.",
         audience: "Туристам, парам, любителям природных мест"
@@ -79,6 +85,7 @@ const tourGroups = [
         distance: "25-40 км",
         difficulty: "Средний",
         duration: "5-7 часов",
+        price: "7 900 ₽",
         summary:
           "Море, красивые виды, набережные и фототочки. Один из самых ярких маршрутов проекта.",
         audience: "Парам, друзьям, туристам"
@@ -95,6 +102,7 @@ const tourGroups = [
         distance: "22-35 км",
         difficulty: "Сложнее среднего",
         duration: "6-8 часов",
+        price: "8 900 ₽",
         summary:
           "Один из самых красивых горных маршрутов для мотивированной аудитории.",
         audience: "Тем, кто хочет более насыщенный и сильный маршрут"
@@ -105,6 +113,7 @@ const tourGroups = [
         distance: "25-45 км",
         difficulty: "Средний",
         duration: "5-7 часов",
+        price: "9 500 ₽",
         summary:
           "Видовой крымский маршрут с сильным туристическим потенциалом и premium-ощущением.",
         audience: "Туристам, парам, мини-группам"
@@ -161,12 +170,12 @@ const keyPoints = [
 
 const contacts = [
   {
-    label: "MAX Василий",
+    label: "Василий",
     value: "8 910 994-99-09",
     href: "https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc"
   },
   {
-    label: "MAX Сергей",
+    label: "Сергей",
     value: "8 961 525-55-59",
     href: "tel:+79615255559"
   },
@@ -220,39 +229,6 @@ const aboutCards = [
     title: "Что для нас важно",
     text:
       "Не просто прокатиться, а провести хороший день: красивые места, нормальная организация, общение и ощущение настоящего маленького путешествия."
-  }
-];
-
-const whyUs = [
-  {
-    title: "Продуманные маршруты",
-    text:
-      "Мы не ведем группу наугад. Маршруты подбираются под формат одного дня, красивые точки и удобный темп."
-  },
-  {
-    title: "Формат для новичков",
-    text:
-      "Электровелосипеды снимают лишнюю нагрузку и делают поездку доступнее для широкой аудитории."
-  },
-  {
-    title: "Малые группы",
-    text:
-      "Небольшой состав дает больше внимания к людям, спокойнее темп и более живую атмосферу."
-  },
-  {
-    title: "Сопровождение",
-    text:
-      "Вы не остаетесь один на маршруте. Есть понятная организация, связь и сопровождение по ходу выезда."
-  },
-  {
-    title: "Красивые локации",
-    text:
-      "Маршруты строятся не ради километров, а ради видов, впечатлений, остановок и хорошего дня на природе."
-  },
-  {
-    title: "Живой подход",
-    text:
-      "Это не безликий поток. Нам важно, чтобы людям было комфортно, интересно и хотелось вернуться снова."
   }
 ];
 
@@ -364,21 +340,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="section__heading">
-          <p className="eyebrow">Почему с нами</p>
-          <h2>Почему стоит ехать именно с нами</h2>
-        </div>
-        <div className="why-grid">
-          {whyUs.map((item) => (
-            <article className="why-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="section" id="tours">
         <div className="section__heading">
           <p className="eyebrow">Маршруты</p>
@@ -402,6 +363,7 @@ export default function HomePage() {
                     <h3>{tour.title}</h3>
                     <p>{tour.summary}</p>
                     <div className="tour-card__meta">
+                      <span className="tour-card__price">{tour.price}</span>
                       <span>{tour.distance}</span>
                       <span>{tour.difficulty}</span>
                       <span>{tour.duration}</span>
@@ -422,17 +384,17 @@ export default function HomePage() {
           <p className="eyebrow">Цены</p>
           <h2>Понятная стартовая стоимость без лишней сложности</h2>
           <p className="section__text">
-            Стоимость зависит от маршрута, длительности и формата выезда, но для
-            первого понимания можно ориентироваться на такую базу.
+            У каждого маршрута на сайте уже есть своя понятная стоимость. Ниже -
+            общий ориентир по тому, как устроен диапазон цен.
           </p>
         </div>
         <div className="price-highlight">
           <div>
-            <p className="eyebrow">Базовая цена</p>
-            <h3 className="price-highlight__value">от 4 500 ₽ за человека</h3>
+            <p className="eyebrow">Диапазон цен</p>
+            <h3 className="price-highlight__value">от 4 500 ₽ до 9 500 ₽</h3>
             <p className="section__text">
-              Итоговая стоимость зависит от конкретного маршрута, даты и формата
-              участия.
+              Легкие городские выезды стоят дешевле, видовые и премиальные маршруты -
+              дороже из-за логистики, длительности и насыщенности программы.
             </p>
           </div>
           <div>
