@@ -1217,17 +1217,17 @@ h3 {
 
 @media (max-width: 640px) {
   .page-shell {
-    width: min(100% - 20px, 1180px);
+    width: min(100% - 16px, 1180px);
     padding-top: 10px;
     padding-bottom: 108px;
   }
 
   h1 {
     max-width: none;
-    font-size: clamp(2rem, 10.8vw, 2.85rem);
-    line-height: 0.94;
+    font-size: clamp(1.85rem, 8.9vw, 2.45rem);
+    line-height: 0.95;
     letter-spacing: -0.045em;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   h2 {
@@ -1240,26 +1240,22 @@ h3 {
   }
 
   .topbar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 12px 14px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px 16px;
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+    border-radius: 20px;
   }
 
   .topbar__brand {
-    font-size: 1rem;
-    line-height: 1.05;
+    font-size: 1.05rem;
+    line-height: 1;
   }
 
   .topbar__nav {
-    width: 100%;
-    gap: 10px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding: 2px 2px 4px;
-    scrollbar-width: none;
+    display: none;
   }
 
   .topbar__nav::-webkit-scrollbar {
@@ -1277,8 +1273,8 @@ h3 {
   }
 
   .hero {
-    gap: 16px;
-    padding: 0 0 28px;
+    gap: 12px;
+    padding: 0 0 22px;
   }
 
   .hero__content,
@@ -1304,8 +1300,8 @@ h3 {
   .legal-header,
   .legal-card,
   .lifestyle-card {
-    padding: 18px;
-    border-radius: 22px;
+    padding: 16px;
+    border-radius: 20px;
   }
 
   .eyebrow {
@@ -1332,23 +1328,27 @@ h3 {
   .why-card p,
   .format-card p,
   .trust-detail-card p {
-    font-size: 0.95rem;
-    line-height: 1.58;
+    font-size: 0.92rem;
+    line-height: 1.54;
   }
 
   .hero__content {
-    padding: 18px;
+    padding: 16px;
   }
 
   .hero__support {
     margin-top: 0;
   }
 
+  .hero__lead {
+    margin-bottom: 10px;
+  }
+
   .hero__actions,
   .booking-card__actions,
   .booking-card__actions--top {
     gap: 10px;
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
   .hero__actions .button,
@@ -1377,8 +1377,17 @@ h3 {
   }
 
   .hero__stats li {
-    padding: 14px 16px;
+    padding: 12px 14px;
     border-radius: 16px;
+  }
+
+  .hero__stats strong {
+    font-size: 1rem;
+  }
+
+  .hero__stats span {
+    font-size: 0.9rem;
+    line-height: 1.42;
   }
 
   .hero__pill-list,
