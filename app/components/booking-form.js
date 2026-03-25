@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 
-const whatsappBaseUrl = "https://wa.me/79615255559";
-
 export default function BookingForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
+  const [status, setStatus] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const message = [
@@ -19,8 +18,12 @@ export default function BookingForm() {
       `Комментарий: ${comment || "-"}`
     ].join("\n");
 
-    const url = `${whatsappBaseUrl}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    try {
+      await navigator.clipboard.writeText(message);
+      setStatus("Текст заявки скопирован. Вставьте его в MAX или Telegram.");
+    } catch {
+      setStatus("Не получилось скопировать автоматически. Скопируйте текст вручную и отправьте его в MAX или Telegram.");
+    }
   };
 
   return (
@@ -59,8 +62,14 @@ export default function BookingForm() {
       </label>
 
       <button className="button button--primary booking-form__submit" type="submit">
-        Отправить в WhatsApp
+        Скопировать заявку
       </button>
+
+      <p className="booking-form__note">
+        После этого можно открыть MAX или Telegram и отправить текст удобному контакту.
+      </p>
+
+      {status ? <p className="booking-form__status">{status}</p> : null}
     </form>
   );
 }

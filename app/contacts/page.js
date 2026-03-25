@@ -6,22 +6,30 @@ export const metadata = {
 
 const bookingChannels = [
   {
-    title: "Василий",
-    text: "Основной контакт по вопросам записи, формата выезда и общих деталей проекта.",
+    title: "MAX Василий",
+    text:
+      "Основной контакт по вопросам записи, формата выезда и общих деталей проекта.",
     linkLabel: "Позвонить 8 910 994-99-09",
     href: "tel:+79109949909"
   },
   {
-    title: "Сергей",
-    text: "Контакт для связи по WhatsApp и уточнения участия в ближайших выездах.",
+    title: "MAX Сергей",
+    text:
+      "Контакт для уточнения участия, логистики, времени старта и организационных деталей.",
     linkLabel: "Позвонить 8 961 525-55-59",
     href: "tel:+79615255559"
   },
   {
-    title: "Telegram",
+    title: "Telegram Василий",
     text: "Личный Telegram для быстрой связи и обсуждения маршрутов.",
     linkLabel: "@vs_voropaev",
     href: "https://t.me/vs_voropaev"
+  },
+  {
+    title: "Telegram Сергей",
+    text: "Еще один прямой контакт в Telegram для вопросов и записи.",
+    linkLabel: "@SMNemtsev",
+    href: "https://t.me/SMNemtsev"
   },
   {
     title: "Telegram-группа",
@@ -95,13 +103,13 @@ export default function ContactsPage() {
         </article>
 
         <article className="legal-card legal-card--accent">
-          <h2>WhatsApp</h2>
+          <h2>Как удобнее связаться</h2>
           <p className="section__text">
-            Если удобнее общаться в мессенджере, можно написать Сергею в
-            WhatsApp и обсудить ближайший выезд.
+            Сейчас основной и самый надежный способ связи для проекта - MAX и
+            Telegram. Можно выбрать любой удобный контакт выше.
           </p>
-          <a className="button button--primary" href="https://wa.me/79615255559">
-            Написать в WhatsApp
+          <a className="button button--primary" href="https://t.me/vs_voropaev">
+            Написать в Telegram
           </a>
         </article>
       </section>
@@ -109,10 +117,10 @@ export default function ContactsPage() {
       <section className="legal-section">
         <div className="section__heading">
           <p className="eyebrow">Сотрудничество</p>
-          <h2>Кому может быть полезен совместный формат</h2>
+          <h2>Ищем единомышленников и партнеров в проект</h2>
           <p className="section__text">
-            Проект можно развивать не только как выезды для частных участников,
-            но и как партнерский продукт для локального туризма и мероприятий.
+            Проект можно развивать не только как выезды для частных участников, но и
+            как партнерский продукт для локального туризма, отдыха и мероприятий.
           </p>
         </div>
         <div className="audience-grid">
