@@ -482,7 +482,6 @@ export default function HomePage() {
             <p className="site-footer__title">Контакты</p>
             <ul className="footer-list">
               <li><a href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">MAX Василий</a></li>
-              <li><a href="tel:+79615255559">MAX Сергей: 8 961 525-55-59</a></li>
               <li><a href="https://t.me/vs_voropaev">Telegram Василий</a></li>
               <li><a href="https://t.me/SMNemtsev">Telegram Сергей</a></li>
             </ul>
