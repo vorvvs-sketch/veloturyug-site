@@ -232,6 +232,24 @@ const aboutCards = [
   }
 ];
 
+const scheduleEntries = [
+  {
+    title: "Парк Краснодар утром",
+    note: "Легкий формат, старт рано утром, группа 4-8 человек.",
+    status: "Открыт набор"
+  },
+  {
+    title: "Абрау-Дюрсо classic",
+    note: "Основной видовой маршрут, подходит парам и мини-группам.",
+    status: "Собираем группу"
+  },
+  {
+    title: "ВелоSea: Геленджик - Кабардинка",
+    note: "Морской маршрут выходного дня, формат для тех, кто хочет яркий выезд.",
+    status: "Ближайший выезд"
+  }
+];
+
 export default function HomePage() {
   return (
     <main className="page-shell">
@@ -242,7 +260,7 @@ export default function HomePage() {
         </a>
         <nav className="topbar__nav" aria-label="Навигация по странице">
           <a href="#tours">Маршруты</a>
-          <a href="#formats">Форматы</a>
+          <a href="#schedule">Расписание</a>
           <a href="#prices">Цены</a>
           <a href="#booking">Запись</a>
           <a href="/contacts">Контакты</a>
@@ -265,8 +283,16 @@ export default function HomePage() {
             <a className="button button--primary" href="#tours">
               Выбрать маршрут
             </a>
-            <a className="button button--ghost" href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">
+            <a
+              className="button button--ghost"
+              href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Связаться в MAX
+            </a>
+            <a className="button button--ghost" href="/contacts">
+              Предложить идею / партнерство
             </a>
           </div>
           <ul className="hero__stats" aria-label="Преимущества">
@@ -337,6 +363,30 @@ export default function HomePage() {
               <p>{item.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section" id="schedule">
+        <div className="section__heading">
+          <p className="eyebrow">Расписание</p>
+          <h2>Ближайшие выезды и какие группы мы собираем сейчас</h2>
+          <p className="section__text">
+            Здесь можно показывать ближайшие выезды, формат группы и куда сейчас идет
+            набор. Потом этот блок легко обновлять под сезон и конкретные даты.
+          </p>
+        </div>
+        <div className="schedule-card">
+          <div className="schedule-list">
+            {scheduleEntries.map((item) => (
+              <article className="schedule-item" key={item.title}>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.note}</p>
+                </div>
+                <span>{item.status}</span>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -429,13 +479,27 @@ export default function HomePage() {
           <p className="eyebrow">Запись</p>
           <h2>Понятный путь к заявке без лишних шагов</h2>
           <p className="section__text">
-            Можно сразу написать в MAX или Telegram, а можно оставить короткую заявку
-            через форму и потом отправить ее в удобный мессенджер.
+            Можно сразу написать в MAX или Telegram, а можно отправить заявку прямо
+            с сайта. Если бот еще не подключен, форма мягко подскажет запасной
+            вариант.
           </p>
+          <div className="booking-card__actions">
+            <a
+              className="button button--ghost"
+              href="/contacts"
+            >
+              Предложить идею / партнерство
+            </a>
+          </div>
         </div>
         <div className="booking-card">
           <div className="booking-card__actions booking-card__actions--top">
-            <a className="button button--primary" href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">
+            <a
+              className="button button--primary"
+              href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               MAX Василий
             </a>
             <a className="button button--ghost-light" href="https://t.me/vs_voropaev">
@@ -473,15 +537,23 @@ export default function HomePage() {
             <p className="site-footer__title">Навигация</p>
             <ul className="footer-list">
               <li><a href="#formats">Форматы</a></li>
+              <li><a href="#schedule">Расписание</a></li>
               <li><a href="#tours">Маршруты</a></li>
               <li><a href="#prices">Цены</a></li>
-              <li><a href="#booking">Запись</a></li>
             </ul>
           </div>
           <div>
             <p className="site-footer__title">Контакты</p>
             <ul className="footer-list">
-              <li><a href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">MAX Василий</a></li>
+              <li>
+                <a
+                  href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MAX Василий
+                </a>
+              </li>
               <li><a href="https://t.me/vs_voropaev">Telegram Василий</a></li>
               <li><a href="https://t.me/SMNemtsev">Telegram Сергей</a></li>
             </ul>
@@ -501,7 +573,12 @@ export default function HomePage() {
         <a className="mobile-cta__link mobile-cta__link--ghost" href="#tours">
           Маршруты
         </a>
-        <a className="mobile-cta__link" href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc" target="_blank" rel="noopener noreferrer">
+        <a
+          className="mobile-cta__link"
+          href="https://max.ru/u/f9LHodD0cOIQCwmy0kabf3WXk8i7BjfSTjoZ9n0byYaQPUUnAuNjwZ_zqPc"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           MAX
         </a>
       </div>
